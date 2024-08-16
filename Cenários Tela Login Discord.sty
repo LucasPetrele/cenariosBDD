@@ -1,0 +1,557 @@
+CENÁRIOS DISCORD
+
+
+CN01: Login bem sucedido com dados válidos nos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’ (e-mail)
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail válido no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E uma senha válida no campo ‘SENHA*’
+E clicar no botão ‘Entrar’
+ENTÃO o sistema irá direcioná-lo para a aplicação
+___________________________________________________________________
+CN02: Login bem sucedido com dados válidos nos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’ (telefone)
+DADO  que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um número de telefone válido no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E uma senha válida no campo ‘SENHA*’
+E clicar no botão ‘Entrar’
+ENTÃO o sistema irá direcioná-lo para a aplicação
+___________________________________________________________________
+CN03: Mensagem “Preencha este campo” no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO deixar o cursor do mouse parado sobre o campo “E-MAIL OU NÚMERO DE TELEFONE*”
+ENTÃO a mensagem “Preencha este campo.” será exibida
+
+CN04: Exibição da barra piscante de texto do campo “E-MAIL OU NÚMERO DE TELEFONE*”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+ENTÃO uma barra piscante de texto será exibida no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+___________________________________________________________________
+CN05: Login com e-mail inválido no campo “E-MAIL OU NÚMERO DE TELEFONE*” (CAPTCHA)
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail inválido no campo
+E clicar no botão ‘Entrar’
+ENTÃO o sistema exibirá um ‘CAPTCHA’
+___________________________________________________________________
+CN06: Resolução de CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E clicar na checkbox ao lado de “Sou humano”
+ENTÃO o ‘CAPTCHA’ será resolvido e fechado
+___________________________________________________________________
+CN07: Mouse sobre checkbox do CAPTCHA 
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E passar o cursor do mouse sobre a checkbox
+ENTÃO as bordas da checkbox mudarão de cor
+___________________________________________________________________
+
+CN08: Mouse sobre a caixa branca do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E passar o cursor do mouse sobre a caixa branca do ‘CAPTCHA’
+ENTÃO a caixa mudará de cor (de RGB 250, 250, 250 para RGB 245, 245, 245)
+___________________________________________________________________
+CN09: Mouse sobre botão ‘x’ do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E passar o cursor do mouse sobre o botão ‘x’ do ‘CAPTCHA’
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+CN10: Clique no botão ‘x’ do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E clicar no botão ‘x’ do ‘CAPTCHA’
+ENTÃO o ‘CAPTCHA’ será fechado
+___________________________________________________________________
+CN11: Mouse sobre o link ‘Privacidade’ do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E passar o cursor do mouse sobre o link ‘Privacidade’
+ENTÃO o link será sublinhado
+___________________________________________________________________
+
+CN12: Mouse sobre o link “Termos e Condições” do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E passar o cursor do mouse sobre o link “Termos e Condições”
+ENTÃO o link será sublinhado
+___________________________________________________________________
+CN13: Mouse sobre a logo do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E deixar o cursor do mouse parado sobre a logo do ‘CAPTCHA’
+ENTÃO o sistema exibirá uma pop-up escrita ‘hCaptcha’
+___________________________________________________________________
+CN14: Clique no link ‘Privacidade’ do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E clicar no link ‘Privacidade’
+ENTÃO será direcionado para a página “https://www.hcaptcha.com/privacy?ref=discord.com&utm_campaign=f5561ba9-8f1e-40ca-9b5b-a0b3f719ef34&utm_medium=checkbox”
+___________________________________________________________________
+CN15: Clique no link “Termos e Condições” do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E clicar no link “Termos e Condições”
+ENTÃO será direcionado para a página “https://www.hcaptcha.com/terms?ref=discord.com&utm_campaign=f5561ba9-8f1e-40ca-9b5b-a0b3f719ef34&utm_medium=checkbox”
+___________________________________________________________________
+CN16: Clique na logo do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E clicar na logo do CAPTCHA
+ENTÃO será redirecionado para a página “https://www.hcaptcha.com/what-is-hcaptcha-about?ref=discord.com&utm_campaign=f5561ba9-8f1e-40ca-9b5b-a0b3f719ef34&utm_medium=checkbox”
+___________________________________________________________________
+CN17: Clique fora da checkbox do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E clicar no retângulo branco fora da checkbox
+ENTÃO o ‘CAPTCHA’ será resolvido e fechado
+___________________________________________________________________
+CN18: Clique fora da janela do CAPTCHA
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o ‘CAPTCHA’
+E clicar fora da janela do ‘CAPTCHA’
+ENTÃO o ‘CAPTCHA’ será fechado
+___________________________________________________________________
+CN19: Login com e-mail não cadastrado no campo “E-MAIL OU NÚMERO DE TELEFONE*” (Mensagem de erro)
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail inválido no campo
+E clicar no botão ‘Entrar’
+E resolver o ‘CAPTCHA’
+ENTÃO a mensagem de erro “Login ou senha inválidos.” será exibida na cor vermelha
+___________________________________________________________________
+CN20: Login com domínio de e-mail incorreto  no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail com domínio invalido (harrypotter123@gaa)
+E clicar no botão ‘Entrar’
+ENTÃO a mensagem de erro “Endereço de e-mail introduzido incorretamente” será exibida na cor vermelha
+___________________________________________________________________
+CN21: Login com e-mail contendo espaços no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail contendo espaço entre os caracteres (potter 123@gmail.com)
+E clicar no botão ‘Entrar’
+ENTÃO a mensagem de erro “Endereço de e-mail introduzido incorretamente” será exibida na cor vermelha
+___________________________________________________________________
+CN22: Extensão de navegador Bug Magnet no campo e-mail
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO inserir um texto contendo mais de 999 caracteres no campo “E-MAIL OU NÚMERO DE TELEFONE*” usando a extensão Bug Magnet 
+ENTÃO a mensagem de erro “Não pode exceder 999 caracteres ou menos de extensão.” será exibida na cor vermelha
+___________________________________________________________________
+
+CN23: Alteração da cor dos nomes dos campos com e-mail inválido
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail inválido no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no botão ‘Entrar’
+E resolver o ‘CAPTCHA’
+ENTÃO a cor do nome dos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’ ficará vermelha
+___________________________________________________________________
+CN24: Login com telefone inválido (CAPTCHA)
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um número de telefone inválido no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no botão ‘Entrar’
+ENTÃO o sistema exibirá um ‘CAPTCHA’
+___________________________________________________________________
+CN25: Login com telefone não cadastrado (Mensagem de erro)
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um telefone não cadastrado
+E clicar no botão ‘Entrar’
+E resolver o ‘CAPTCHA’
+ENTÃO a mensagem de erro “Login ou senha inválidos.” será exibida na cor vermelha.
+___________________________________________________________________
+
+CN26: Alteração da cor dos nomes dos campos com telefone inválido
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO  digitar um telefone inválido no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no botão ‘Entrar’
+E resolver o ‘CAPTCHA’
+ENTÃO a cor do nome dos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’ ficará vermelha
+___________________________________________________________________
+CN27: Exibição do código telefônico do país
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar 3 (três) caracteres numéricos e sequenciais no campo de “E-MAIL OU NÚMERO DE TELEFONE*”
+ENTÃO um botão contendo o código telefônico do país será exibido
+___________________________________________________________________
+CN28: Ocultação do código telefônico do país
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar 3 (três) caracteres numéricos e sequenciais no campo de “E-MAIL OU NÚMERO DE TELEFONE*”
+E digitar 1 (um) caractere não-numérico
+ENTÃO o botão contendo o código telefônico do país será desabilitado
+___________________________________________________________________
+CN29: Exibição da lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar 3 (três) caracteres numéricos e sequenciais no campo de “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no código telefônico do país exibido
+ENTÃO o sistema exibirá uma lista com opções de códigos telefônicos de países
+___________________________________________________________________
+CN30: Mouse sobre um país na lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E passar o cursor do mouse sobre o botão de um país
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+CN31: Clique na barra de rolagem da lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E clicar mantendo pressionado na barra de rolagem
+E arrastar o cursor do mouse para baixo
+ENTÃO a lista de países rolará para baixo exibindo novos resultados
+___________________________________________________________________
+CN32: Clique no trilho da barra de rolagem da lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E clicar no trilho da barra de rolagem
+ENTÃO a lista de países rolará para baixo exibindo novos resultados
+___________________________________________________________________
+CN33: Scroll-down na lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E deixar o cursor do mouse sobre a lista
+E usar o scroll do mouse para baixo
+ENTÃO a lista de países rolará para baixo exibindo novos resultados
+___________________________________________________________________
+CN34: Scroll-up na lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E usar o scroll do mouse para baixo com o cursor posicionado sobre a lista
+E usar o scroll do mouse para cima com o cursor posicionado sobre a lista
+ENTÃO a lista de países rolará para cima
+___________________________________________________________________
+CN35: Campo de pesquisa na lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar 3 (três) caracteres numéricos e sequenciais no campo de “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no código telefônico do país exibido
+ENTÃO um campo de pesquisa “Procurar um país” será exibido
+___________________________________________________________________
+CN36: Exibição da barra piscante de texto do campo “Procurar um país”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar 3 (três) caracteres numéricos e sequenciais no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no código telefônico do país exibido
+ENTÃO uma barra piscante de texto será exibida no campo de pesquisa “Procurar um país”
+___________________________________________________________________
+CN37: Dados corretos em português no campo “Procurar um país”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o campo de pesquisa “Procurar um país”
+E pesquisar um país em português relacionado ao código telefônico válido
+ENTÃO o filtro irá exibir o país selecionado
+___________________________________________________________________
+CN38: Dados corretos em inglês no campo “Procurar um país”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o campo de pesquisa “Procurar um país”
+E pesquisar um país em inglês relacionado ao código telefônico válido
+ENTÃO o filtro irá exibir o país selecionado em português
+___________________________________________________________________
+CN39: Dados incorretos no campo “Procurar um país”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o campo de pesquisa “Procurar um país”
+E digitar ‘palavra’
+ENTÃO o filtro irá exibir ‘Nenhum’ como resultado
+___________________________________________________________________
+CN40: Seleção de país no campo “Procurar um país”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o campo de pesquisa “Procurar um país”
+E digitar um país válido diferente do código telefônico atual
+E clicar no resultado da pesquisa
+ENTÃO o código telefônico do país será alterado no campo  “E-MAIL OU NÚMERO DE TELEFONE*” de acordo com sua pesquisa
+___________________________________________________________________
+CN41: Seleção na lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E clicar em um país diferente do código telefônico atual
+ENTÃO o código telefônico do país será alterado no campo “E-MAIL OU NÚMERO DE TELEFONE*” de acordo com sua seleção
+___________________________________________________________________
+CN42: Mouse sobre o botão ‘x’ do campo “Procurar um país”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o campo de pesquisa “Procurar um país”
+E digitar alguma coisa
+E passar o cursor do mouse sobre o botão ‘x’ do campo de pesquisa
+ENTÃO o botão ‘x’ mudará de cor
+________________________________________________________________
+CN43: Clique no botão ‘x’ do campo “Procurar um país”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o campo de pesquisa “Procurar um país”
+E digitar alguma coisa
+E clicar no botão ‘x’ do campo de pesquisa
+ENTÃO o sistema voltará a exibir a lista com opções de códigos telefônicos de países
+___________________________________________________________________
+CN44: Clique fora da lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E clicar com o cursor do mouse fora da lista
+ENTÃO a mesma será fechada
+___________________________________________________________________
+CN45: Login com e-mail e senha inválidos nos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’ (CAPTCHA)
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail inválido no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E digitar uma senha inválida no campo ‘SENHA*’ 
+E clicar no botão ‘Entrar’
+ENTÃO o sistema exibirá um ‘CAPTCHA’
+___________________________________________________________________
+CN46: Login com e-mail e senha inválidos nos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’ (mensagem de erro)
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar dados inválidos para login nos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’ 
+E clicar no botão ’Entrar’
+E resolver o ‘CAPTCHA’
+ENTÃO a mensagem de erro “Login ou senha inválidos.” será exibida na cor vermelha
+___________________________________________________________________
+CN47: Exibição da barra piscante de texto do campo ‘SENHA*’
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar no campo ‘SENHA*’
+ENTÃO uma barra piscante de texto será exibida no campo ‘SENHA*’
+___________________________________________________________________
+CN48: Login com e-mail válido e senha inválida
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO preencher o login até o campo ‘SENHA*’ com a senha inválida
+E clicar no botão ’Entrar’
+ENTÃO a mensagem de erro “Login ou senha inválidos.” será exibida na cor vermelha
+___________________________________________________________________
+CN49: Alteração da cor dos nomes dos campos com credenciais inválidas nos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’ 
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar dados inválidos para login nos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’’ 
+E clicar no botão ‘Entrar’
+E resolver o ‘CAPTCHA’
+ENTÃO a cor do nome dos campos “E-MAIL OU NÚMERO DE TELEFONE*” e ‘SENHA*’ ficará vermelha
+___________________________________________________________________
+CN50: Texto longo no campo senha
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail qualquer no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E digitar uma senha com mais de 72 caracteres no campo ‘SENHA*’
+E clicar no botão ‘Entrar’
+ENTÃO a mensagem de erro “Não pode exceder 72 caracteres.” será exibida na cor vermelha
+___________________________________________________________________
+CN51: Uso da Extensão Bug Magnet no campo ‘SENHA*’
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO inserir um texto contendo mais de 999 caracteres no campo ‘SENHA*’ usando a extensão Bug Magnet
+ENTÃO a mensagem de erro “Não pode exceder 999 caracteres ou menos de extensão.” será exibida na cor vermelha
+___________________________________________________________________
+CN52: Login com e-mail inválido no campo “E-MAIL OU NÚMERO DE TELEFONE*” e com campo ‘SENHA*’ em branco
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO  preencher o login até o campo ‘SENHA*’ com a senha em branco
+E clicar no botão ‘Entrar’
+E resolver o ‘CAPTCHA’
+ENTÃO a mensagem de erro “Login ou senha inválidos.” será exibida na cor vermelha
+___________________________________________________________________
+CN53: Mouse sobre o link “Esqueceu sua senha?”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO passar o cursor do mouse sobre o link “Esqueceu sua senha?”
+ENTÃO o link será sublinhado
+___________________________________________________________________
+CN54: Exibição da janela de recuperação de senha com e-mail cadastrado
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail cadastrado no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no botão “Esqueceu sua senha?”
+ENTÃO o sistema exibirá uma janela de recuperação de senha
+___________________________________________________________________
+CN55: Tentativa de recuperação de senha com e-mail não cadastrado
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail não cadastrado no campo “E-MAIL OU NÚMERO DE
+TELEFONE*”
+E clicar no botão “Esqueceu sua senha?”
+E resolver o ‘CAPTCHA’
+ENTÃO o sistema exibirá uma mensagem “Este e-mail não existe.” na cor vermelha
+___________________________________________________________________
+CN56: Exibição da janela de código de SMS com telefone cadastrado
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um telefone cadastrado no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no botão “Esqueceu sua senha?” 
+ENTÃO o sistema exibirá uma janela solicitando um código de confirmação de SMS para redefinir a senha
+___________________________________________________________________
+
+CN57: Recuperação de senha com telefone não cadastrado
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um telefone não cadastrado no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no botão “Esqueceu sua senha?”
+E resolver o ‘CAPTCHA’
+ENTÃO o sistema exibirá uma janela solicitando um código de confirmação de SMS para redefinir a senha
+___________________________________________________________________
+CN58: Clique fora da janela de recuperação de senha
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar um e-mail cadastrado no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+E clicar no botão “Esqueceu sua senha?”
+E clicar fora da janela de recuperação de senha 
+ENTÃO o sistema fechará a janela de recuperação de senha
+___________________________________________________________________
+CN59: Mouse sobre o botão ‘Ok’ da janela de recuperação de senha
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a janela de recuperação de senha
+E passar o cursor do mouse sobre o botão ‘Ok’
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+
+CN60: Clique sobre o botão ‘Ok’ da janela de recuperação de senha
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a janela de recuperação de senha
+E clicar com o cursor do mouse sobre o botão ‘Ok’
+ENTÃO o sistema fechará a janela de recuperação de senha
+___________________________________________________________________
+CN61: Pressionando o clique do mouse sobre o botão ‘Ok’ da janela de recuperação de senha
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a janela de recuperação de senha
+E pressionar o cursor do mouse sobre o botão ‘Ok’
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+CN62: Clique no link “Esqueceu sua senha?”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar no link “Esqueceu sua senha?”
+ENTÃO a mensagem de erro “Este campo é obrigatório” será exibida na cor vermelha no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+___________________________________________________________________
+CN63: Alteração da cor do nome do campo “Esqueceu sua senha?”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar no link “Esqueceu sua senha?”
+ENTÃO a cor do nome do campo “E-MAIL OU NÚMERO DE TELEFONE*” ficará vermelha
+___________________________________________________________________
+
+CN64: Mouse sobre o botão ‘Entrar’
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO passar o cursor do mouse sobre o botão ‘Entrar’
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+CN65: Pressionando o clique do mouse sobre o botão ‘Entrar’
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO pressionar o cursor do mouse sobre o botão ‘Entrar’
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+CN66: Mouse sobre o link ‘Registre-se’
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO passar o cursor do mouse sobre o link ‘Registre-se’
+ENTÃO o link será sublinhado
+___________________________________________________________________
+CN67: Clique no link ‘Registre-se’
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar no link ‘Registre-se’
+ENTÃO será direcionado para a página “https://discord.com/register”
+___________________________________________________________________
+CN68: Login com QR CODE
+DADO que o usuário esteja na página “https://discord.com/login” 
+QUANDO escanear o QR CODE com o app móvel do discord
+ENTÃO o sistema irá exibir a foto do usuário na tela do computador junto a mensagem "Verifique seu telefone!"
+___________________________________________________________________
+CN69: Clique no link “Não sou eu, recomece” do QR CODE
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO  escanear o QR CODE com o app móvel do discord
+E acessar a foto do usuário junto a mensagem "Verifique seu telefone!"
+E clicar no link "Não sou eu, recomece"
+ENTÃO o sistema voltará a exibir um QR CODE na tela de login
+___________________________________________________________________
+CN70: Login com QR CODE na câmera padrão do celular
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO escanear o QR CODE com a câmera do celular
+ENTÃO o sistema irá direcioná-lo para o app móvel no celular
+___________________________________________________________________
+CN71: Login com QR CODE com o celular sem o aplicativo 
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO escanear o QR CODE com a câmera do celular
+ENTÃO o sistema irá direcioná-lo para a página “https://discord.com/ra/rc-jzL57RXKr3c9zqd1KhS9DDqCofDrNiuaI6EsIWxU"
+___________________________________________________________________
+CN72: Atualização do QR CODE
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO não realizar nenhuma ação por 2 (dois) minutos
+ENTÃO o QR CODE deve ser atualizado 
+___________________________________________________________________
+CN73: Mouse sobre o link “Ou, faça login com a senha”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO passar o cursor do mouse sobre o link “Ou, faça login com a senha”
+ENTÃO o link será sublinhado
+CN74: Clique no link “Ou, faça login com a senha”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar no link “Ou, faça login com a senha”
+ENTÃO o sistema exibirá a janela de “Segurança do Windows”
+___________________________________________________________________
+CN75: Tecla tab como selecionador
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO apertar o botão ‘TAB’ no teclado
+ENTÃO ficará em evidência com contorno azul o próximo campo a ser preenchido
+___________________________________________________________________
+CN76: Login sem conexão com a internet
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar suas credenciais
+E não tiver conexão com a internet
+ENTÃO o botão ‘Entrar’ será substituído por três pontos simulando carregamento
+___________________________________________________________________
+CN77: Alteração da imagem QR CODE sem conexão com a internet
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar suas credenciais
+E não tiver conexão com a internet
+ENTÃO a imagem QR CODE será substituída por dois pontos simulando carregamento na cor azul
+___________________________________________________________________
+
+CENÁRIOS GOOGLE CHROME
+
+CN78: Login sem preencher nenhum dos campos
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar no botão ‘Entrar’
+ENTÃO uma pop-up escrita “Preencha este campo.” será exibida sinalizando o campo “EMAIL OU NÚMERO DE TELEFONE*”
+___________________________________________________________________
+CN79: Alteração da cor do campo “E-MAIL OU NÚMERO DE TELEFONE*” com credencial preenchida automaticamente
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar as primeiras letras do e-mail cadastrado
+E clicar no preenchimento de e-mail automático devido ao cache de memória
+ENTÃO o campo “E-MAIL OU NÚMERO DE TELEFONE*” ficará com a cor branca
+___________________________________________________________________
+CN80: Cor do campo “E-MAIL OU NÚMERO DE TELEFONE*” com telefone preenchido automaticamente 
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO digitar o primeiro caractere numérico do telefone cadastrado
+E clicar no preenchimento de telefone automático devido ao cache de memória
+ENTÃO o campo “E-MAIL OU NÚMERO DE TELEFONE*” ficará com a cor branca
+___________________________________________________________________
+CN81: Mensagem “Usar uma chave de acesso” no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar com o cursor do mouse no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+ENTÃO uma pop-up será exibida com a mensagem “Usar uma chave de acesso”
+___________________________________________________________________
+CENÁRIOS FIREFOX
+
+CN82: Contagem de pisques da barra piscante de texto do campo “E-MAIL OU NÚMERO DE TELEFONE*”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+ENTÃO a barra piscante de texto deverá piscar por 5 (cinco) vezes antes de ficar estática
+___________________________________________________________________
+CN83: Botão ‘Enter’ no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO pressionar o botão ‘Enter’ do teclado
+ENTÃO uma pop-up escrita “Preencha este campo.” será exibida no campo “E-MAIL OU NÚMERO DE TELEFONE*”
+___________________________________________________________________
+CN84: Contagem de pisques da barra piscante de texto do campo ‘SENHA*’
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO clicar no campo ‘SENHA*’
+ENTÃO a barra piscante de texto deverá piscar por 5 (cinco) vezes antes de ficar estática
+___________________________________________________________________
+CN85: Contagem de pisques da barra piscante de texto do campo de pesquisa “Procurar um país”
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar o campo de pesquisa “Procurar um país”
+E clicar no campo de pesquisa
+ENTÃO a barra piscante de texto deverá piscar por 5 (cinco) vezes antes de ficar estática
+
+CN86: Mouse sobre o botão de seta para cima da barra de rolagem da lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E passar o cursor do mouse sobre o botão de seta para cima na barra de rolagem
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+CN87: Clique no botão de seta para cima da barra de rolagem da lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E clicar no botão de seta para cima da barra de rolagem
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+CN88: Mouse sobre o botão de seta para baixo da barra de rolagem da lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E passar o cursor do mouse sobre o botão de seta para baixo na barra de rolagem
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+
+CN89: Clique no botão de seta para baixo da barra de rolagem da lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E clicar no botão de seta para baixo da barra de rolagem
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+CN90: Mouse sobre a barra de rolagem da lista de códigos telefônicos de países
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E passar o cursor do mouse sobre o botão da barra de rolagem
+ENTÃO o botão mudará de cor
+___________________________________________________________________
+CN91: Clique no botão da barra de rolagem da lista de códigos telefônicos de países 
+DADO que o usuário esteja na página “https://discord.com/login”
+QUANDO acessar a lista de códigos telefônicos de países
+E clicar no botão da barra de rolagem
+ENTÃO o botão mudará de cor
